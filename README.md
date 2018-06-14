@@ -42,7 +42,7 @@ Configurations:
 * Disable default Ajax tracking 
 * Max Ajax calls per view logged
 
-Build Status:  ![Build status](https://jlattimer.visualstudio.com/_apis/public/build/definitions/361a4432-eb0a-46be-bead-c7412245eeae/26/badge)
+Build Status:  ![Build status](https://jlattimer.visualstudio.com/_apis/public/build/definitions/06ce8222-9dda-4377-9d93-63cc2e555086/29/badge)
 
 https://www.nuget.org/packages/JLattimer.D365AppInsights.Js/
 
