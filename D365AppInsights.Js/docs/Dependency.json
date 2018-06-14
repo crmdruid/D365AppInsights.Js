@@ -1,0 +1,39 @@
+[{
+	"time": "2018-02-05T22:49:00.151Z",
+	"iKey": "[AiKey]",
+	"name": "Microsoft.ApplicationInsights.[AIKeyNoHyphens].RemoteDependency",
+	"tags": {
+		"ai.session.id": "sAAn3",
+		"ai.device.id": "browser",
+		"ai.device.type": "Browser",
+		"ai.internal.sdkVersion": "javascript:1.0.15",
+		"ai.user.id": "IkXVD",
+		"ai.user.authUserId": "8946B170-2F1F-4533-9948-FBD29C093B90",
+		"ai.operation.id": "J1h14",
+		"ai.operation.name": "/form/ClientApiWrapper.aspx"
+	},
+	"data": {
+		"baseType": "RemoteDependencyData",
+		"baseData": {
+			"id": "8PAx",
+			"ver": 2,
+			"name": "GET /delay/2",
+			"resultCode": "200",
+			"duration": "2555",
+			"success": true,
+			"data": "https://httpbin.org/delay/2?test=1",
+			"target": "httpbin.org",
+			"type": "Ajax",
+			"properties": {
+				"entityId": "7E4BA42A-07F0-E711-A962-000D3A367368",
+				"entityName": "account",
+				"formType": "Update",
+				"orgName": "https://test.crm.dynamics.com",
+				"source": "JavaScript",
+				"methodName": "DependencyTest",
+				"mode": "Asynchronous"
+			},
+			"measurements": null
+		}
+	}
+}]

@@ -1,0 +1,32 @@
+[{
+	"time": "2018-02-06T03:06:00.428Z",
+	"iKey": "[AiKey]",
+	"name": "Microsoft.ApplicationInsights.[AIKeyNoHyphens].Event",
+	"tags": {
+		"ai.session.id": "zhfuP",
+		"ai.device.id": "browser",
+		"ai.device.type": "Browser",
+		"ai.internal.sdkVersion": "javascript:1.0.15",
+		"ai.user.id": "IkXVD",
+		"ai.user.authUserId": "8946B170-2F1F-4533-9948-FBD29C093B90",
+		"ai.operation.id": "WxOV",
+		"ai.operation.name": "/form/ClientApiWrapper.aspx"
+	},
+	"data": {
+		"baseType": "EventData",
+		"baseData": {
+			"ver": 2,
+			"name": "Button Click",
+			"properties": {
+				"entityId": "7E4BA42A-07F0-E711-A962-000D3A367368",
+				"entityName": "account",
+				"formType": "Update",
+				"orgName": "https://test.crm.dynamics.com",
+				"source": "JavaScript"
+			},
+			"measurements": {
+				"click": 1
+			}
+		}
+	}
+}]

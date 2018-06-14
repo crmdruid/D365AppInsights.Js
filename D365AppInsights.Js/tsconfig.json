@@ -1,0 +1,13 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "js",
+    "target": "es5",
+    "removeComments": false,
+    "declaration": true,
+    "sourceMap": false
+  },
+  "include": [
+    "./ts/**/*"
+  ]
+}

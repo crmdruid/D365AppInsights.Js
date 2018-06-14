@@ -1,0 +1,1 @@
+﻿This project exists only to provide the referenced NuGet packages to D365AppInsights.Js.NuGet

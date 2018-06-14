@@ -1,0 +1,106 @@
+[{
+	"time": "2018-02-06T02:56:42.186Z",
+	"iKey": "[AiKey]",
+	"name": "Microsoft.ApplicationInsights.[AIKeyNoHyphens].Exception",
+	"tags": {
+		"ai.session.id": "zhfuP",
+		"ai.device.id": "browser",
+		"ai.device.type": "Browser",
+		"ai.internal.sdkVersion": "javascript:1.0.15",
+		"ai.user.id": "IkXVD",
+		"ai.user.authUserId": "8946B170-2F1F-4533-9948-FBD29C093B90",
+		"ai.operation.id": "lAG6h",
+		"ai.operation.name": "/form/ClientApiWrapper.aspx"
+	},
+	"data": {
+		"baseType": "ExceptionData",
+		"baseData": {
+			"ver": 2,
+			"exceptions": [{
+				"typeName": "ReferenceError",
+				"message": "doSomethingNotDefined is not defined",
+				"hasFullStack": true,
+				"stack": "ReferenceError: doSomethingNotDefined is not defined\n    at ExceptionTest (https://test.crm.dynamics.com/%7B636534644940003292%7D/WebResources/lat_Exception.js?ver=-540537618:5:9)\n    at eval (eval at RunHandlerInternal (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:153:1), <anonymous>:1:1)\n    at RunHandlerInternal (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:159:1)\n    at RunHandlers (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:118:1)\n    at ExecuteHandler (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:81:1)\n    at Mscrm.TurboForm.Control.CustomScriptsManager.$DY_1 (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5067:100)\n    at Mscrm.TurboForm.Control.CustomScriptsManager.executeHandler (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5005:18)\n    at Mscrm.TurboForm.Control.CustomScriptsManager.executeHandlerByDescriptor (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5036:18)\n    at https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5047:19\n    at https://test.crm.dynamics.com/_common/global.ashx?ver=-540537618:6744:189913",
+				"parsedStack": [{
+					"level": 0,
+					"method": "ExceptionTest",
+					"assembly": "at ExceptionTest (https://test.crm.dynamics.com/%7B636534644940003292%7D/WebResources/lat_Exception.js?ver=-540537618:5:9)",
+					"fileName": "https://test.crm.dynamics.com/%7B636534644940003292%7D/WebResources/lat_Exception.js?ver=-540537618",
+					"line": 5
+				},
+				{
+					"level": 1,
+					"method": "eval (eval at RunHandlerInternal",
+					"assembly": "at eval (eval at RunHandlerInternal (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:153:1), <anonymous>:1:1)",
+					"fileName": "https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:153:1), <anonymous>",
+					"line": 1
+				},
+				{
+					"level": 2,
+					"method": "RunHandlerInternal",
+					"assembly": "at RunHandlerInternal (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:159:1)",
+					"fileName": "https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618",
+					"line": 159
+				},
+				{
+					"level": 3,
+					"method": "RunHandlers",
+					"assembly": "at RunHandlers (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:118:1)",
+					"fileName": "https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618",
+					"line": 118
+				},
+				{
+					"level": 4,
+					"method": "ExecuteHandler",
+					"assembly": "at ExecuteHandler (https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618:81:1)",
+					"fileName": "https://test.crm.dynamics.com/form/ClientApiWrapper.aspx?ver=-540537618",
+					"line": 81
+				},
+				{
+					"level": 5,
+					"method": "Mscrm.TurboForm.Control.CustomScriptsManager.$DY_1",
+					"assembly": "at Mscrm.TurboForm.Control.CustomScriptsManager.$DY_1 (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5067:100)",
+					"fileName": "https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618",
+					"line": 5067
+				},
+				{
+					"level": 6,
+					"method": "Mscrm.TurboForm.Control.CustomScriptsManager.executeHandler",
+					"assembly": "at Mscrm.TurboForm.Control.CustomScriptsManager.executeHandler (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5005:18)",
+					"fileName": "https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618",
+					"line": 5005
+				},
+				{
+					"level": 7,
+					"method": "Mscrm.TurboForm.Control.CustomScriptsManager.executeHandlerByDescriptor",
+					"assembly": "at Mscrm.TurboForm.Control.CustomScriptsManager.executeHandlerByDescriptor (https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5036:18)",
+					"fileName": "https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618",
+					"line": 5036
+				},
+				{
+					"level": 8,
+					"method": "<no_method>",
+					"assembly": "at https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618:5047:19",
+					"fileName": "https://test.crm.dynamics.com/_static/form/formcontrols.js?ver=-540537618",
+					"line": 5047
+				},
+				{
+					"level": 9,
+					"method": "<no_method>",
+					"assembly": "at https://test.crm.dynamics.com/_common/global.ashx?ver=-540537618:6744:189913",
+					"fileName": "https://test.crm.dynamics.com/_common/global.ashx?ver=-540537618",
+					"line": 6744
+				}]
+			}],
+			"severityLevel": 3,
+			"properties": {
+				"entityId": "7E4BA42A-07F0-E711-A962-000D3A367368",
+				"entityName": "account",
+				"formType": "Update",
+				"orgName": "https://test.crm.dynamics.com",
+				"source": "JavaScript"
+			},
+			"measurements": null
+		}
+	}
+}]
