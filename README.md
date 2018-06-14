@@ -1,5 +1,5 @@
 # D365AppInsights.Js
-## Dynamics 365/CE Application Insights logging for JavaScript/TypeScript. 
+## Dynamics 365/CE Application Insights logging for JavaScript/TypeScript
 
 This contains the minified, unminified, map, TypeScript, and TypeScript definition files needed to implement Azure Application Insights logging as well as the content from the original Microsoft implementation.   
 
