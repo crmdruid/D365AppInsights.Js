@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365AppInsights.Js.NuGet", "..\D365AppInsights.Js.NuGet\D365AppInsights.Js.NuGet.csproj", "{C176C753-DCB5-47D7-A1A0-CF6F8EF9A85C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365AppInsights.Js.NuGet", "D365AppInsights.Js.NuGet\D365AppInsights.Js.NuGet.csproj", "{C176C753-DCB5-47D7-A1A0-CF6F8EF9A85C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365AppInsights.Js.References", "..\D365AppInsights.Js.References\D365AppInsights.Js.References.csproj", "{A68DF862-999E-4B8E-9CB2-5094D90BFAE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D365AppInsights.Js.References", "D365AppInsights.Js.References\D365AppInsights.Js.References.csproj", "{A68DF862-999E-4B8E-9CB2-5094D90BFAE5}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D365AppInsights.Js", ".", "{470223EF-2091-4986-B4AD-F28F871E1549}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D365AppInsights.Js", "D365AppInsights.Js\", "{470223EF-2091-4986-B4AD-F28F871E1549}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_17438"
@@ -25,7 +25,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D365AppInsights.Js", ".", "
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "17438"
-		SlnRelativePath = "..\D365AppInsights.Js\"
+		SlnRelativePath = "D365AppInsights.Js\"
 	EndProjectSection
 EndProject
 Global
