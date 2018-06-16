@@ -26,30 +26,28 @@ gulp.task("build:ts", function () {
     return tsProject.src().pipe(tsProject()).pipe(gulp.dest("../D365AppInsights.Js/js"));
 });
 
-gulp.task("move:ts", ["build:ts"], function () {
-    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
-
-    return gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts"));
+gulp.task("move:ts", ["build:ts"], function (callback) {
+    gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts")).on("end", callback);
 });
 
-gulp.task("move:dts", ["move:ts"], function () {
-    return gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
+gulp.task("move:dts", ["move:ts"], function (callback) {
+    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest)).on("end", callback);
 });
 
-gulp.task("move:js", ["move:dts"], function () {
-    return gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
+gulp.task("move:js", ["move:dts"], function (callback) {
+    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.concatJsDest))
-        .pipe(gulp.dest(""));
+        .pipe(gulp.dest("")).on("end", callback);
 });
 
-gulp.task("min:js", ["move:js"], function () {
-    return gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
+gulp.task("min:js", ["move:js"], function (callback) {
+    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(sourcemaps.init())
         .pipe(concat(paths.concatJsMinDest))
         .pipe(gulp.dest(""))
         .pipe(uglify())
         .pipe(sourcemaps.write(""))
-        .pipe(gulp.dest(""));
+        .pipe(gulp.dest("")).on("end", callback);
 });
 
 gulp.task("build:all", ["build:ts", "move:ts", "move:dts", "move:js", "min:js"]);
