@@ -29,17 +29,21 @@ gulp.task("build:ts", function () {
 gulp.task("move:ts", ["build:ts"], function () {
     gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
 
-    gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts"));
+    return gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts"));
 });
 
-gulp.task("move:js", ["build:ts"], function () {
-    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
+gulp.task("move:dts", ["move:ts"], function () {
+    return gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
+});
+
+gulp.task("move:js", ["move:dts"], function () {
+    return gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.concatJsDest))
         .pipe(gulp.dest(""));
 });
 
 gulp.task("min:js", ["move:js"], function () {
-    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
+    return gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(sourcemaps.init())
         .pipe(concat(paths.concatJsMinDest))
         .pipe(gulp.dest(""))
@@ -48,4 +52,4 @@ gulp.task("min:js", ["move:js"], function () {
         .pipe(gulp.dest(""));
 });
 
-gulp.task("build:all", ["build:ts", "move:js", "move:ts", "min:js"]);
+gulp.task("build:all", ["build:ts", "move:ts", "move:dts", "move:js", "min:js"]);
