@@ -30,12 +30,12 @@ gulp.task("move:js", ["build:ts"], function () {
     gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.concatJsDest))
         .pipe(gulp.dest(""));
-
-    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
 });
 
 gulp.task("move:ts", ["build:ts"], function () {
     gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts"));
+    
+    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
 });
 
 gulp.task("min:js", ["move:js"], function () {
