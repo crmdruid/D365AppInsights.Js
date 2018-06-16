@@ -26,28 +26,28 @@ gulp.task("build:ts", function () {
     return tsProject.src().pipe(tsProject()).pipe(gulp.dest("../D365AppInsights.Js/js"));
 });
 
-gulp.task("move:ts", ["build:ts"], function (callback) {
-    gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts")).on("end", callback);
-});
-
-gulp.task("move:dts", ["move:ts"], function (callback) {
-    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest)).on("end", callback);
-});
-
-gulp.task("move:js", ["move:dts"], function (callback) {
+gulp.task("move:js", ["build:ts"], function () {
     gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.concatJsDest))
-        .pipe(gulp.dest("")).on("end", callback);
+        .pipe(gulp.dest(""));
 });
 
-gulp.task("min:js", ["move:js"], function (callback) {
+gulp.task("min:js", ["move:js"], function () {
     gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(sourcemaps.init())
         .pipe(concat(paths.concatJsMinDest))
         .pipe(gulp.dest(""))
         .pipe(uglify())
         .pipe(sourcemaps.write(""))
-        .pipe(gulp.dest("")).on("end", callback);
+        .pipe(gulp.dest(""));
 });
 
-gulp.task("build:all", ["build:ts", "move:ts", "move:dts", "move:js", "min:js"]);
+gulp.task("move:ts", ["min:js"], function () {
+    gulp.src("../D365AppInsights.Js/ts/jlattimer.d365appinsights.ts").pipe(gulp.dest(paths.jsDest + "/ts"));
+});
+
+gulp.task("move:dts", ["move:ts"], function () {
+    gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
+});
+
+gulp.task("build:all", ["build:ts", "move:js", "min:js", "move:ts", "move:dts"]);
