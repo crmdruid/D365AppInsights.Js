@@ -1,5 +1,4 @@
-# D365AppInsights
-## Dynamics 365/CE Application Insights logging for JavaScript/TypeScript. 
+## Dynamics 365/CE Application Insights logging for JavaScript/TypeScript
 
 This contains the minified, unminified, map, TypeScript, and TypeScript definition files needed to implement Azure Application Insights logging as well as the content from the original Microsoft implementation.   
 
@@ -43,7 +42,7 @@ Configurations:
 * Disable default Ajax tracking 
 * Max Ajax calls per view logged
 
-Build Status:  ![Build status](https://jlattimer.visualstudio.com/_apis/public/build/definitions/361a4432-eb0a-46be-bead-c7412245eeae/26/badge)
+Build Status:  ![Build status](https://jlattimer.visualstudio.com/_apis/public/build/definitions/06ce8222-9dda-4377-9d93-63cc2e555086/29/badge)
 
 https://www.nuget.org/packages/JLattimer.D365AppInsights.Js/
 
