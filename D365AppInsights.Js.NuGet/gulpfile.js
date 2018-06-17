@@ -19,6 +19,7 @@ paths.jsDest = paths.root + "./content";
 paths.concatJsDest = paths.jsDest + "/jlattimer.d365appinsights.js";
 paths.concatJsMinDest = paths.jsDest + "/jlattimer.d365appinsights.min.js";
 paths.dTsDest = paths.jsDest + "/Scripts/typings/jlattimer.d365appinsights";
+paths.dTsDestMs = paths.jsDest + "/Scripts/typings/microsoft.applicationinsights";
 
 gulp.task("build:ts", function () {
     var tsProject = ts.createProject("../D365AppInsights.Js/tsconfig.json");
@@ -30,6 +31,8 @@ gulp.task("move:js", ["build:ts"], function () {
     gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.concatJsDest))
         .pipe(gulp.dest(""));
+
+    gulp.src("../D365AppInsights.Js/scripts/ai.*.js").pipe(gulp.dest(paths.jsDest));
 });
 
 gulp.task("min:js", ["move:js"], function () {
@@ -48,6 +51,8 @@ gulp.task("move:ts", ["min:js"], function () {
 
 gulp.task("move:dts", ["move:ts"], function () {
     gulp.src("../D365AppInsights.Js/js/jlattimer.d365appinsights.d.ts").pipe(gulp.dest(paths.dTsDest));
+
+    gulp.src("../D365AppInsights.Js/scripts/*.ts").pipe(gulp.dest(paths.dTsDestMs));
 });
 
 gulp.task("build:all", ["build:ts", "move:js", "min:js", "move:ts", "move:dts"]);

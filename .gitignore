@@ -261,11 +261,10 @@ __pycache__/
 *.pyc
 
 # Generated files
+D365AppInsights.Js.NuGet/content/ai*
 D365AppInsights.Js.NuGet/content/Scripts/
 D365AppInsights.Js.NuGet/content/ts/
 D365AppInsights.Js.NuGet/content/jlattimer.d365appinsights.js
 D365AppInsights.Js.NuGet/content/jlattimer.d365appinsights.min.js
 D365AppInsights.Js.NuGet/content/jlattimer.d365appinsights.min.js.map
 D365AppInsights.Js/js/
-D365AppInsights.Js/scripts/ai.*
-D365AppInsights.Js.References/scripts

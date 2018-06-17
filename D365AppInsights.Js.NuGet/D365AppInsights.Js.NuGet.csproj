@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="content\ai.1.0.18-build01843.js" />
+    <Content Include="content\ai.1.0.18-build01843.min.js" />
     <Content Include="content\jlattimer.d365appinsights.js" />
     <Content Include="content\jlattimer.d365appinsights.min.js" />
     <Content Include="content\ReadMe.txt" />
@@ -84,26 +86,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\D365AppInsights.Js.References\D365AppInsights.Js.References.csproj">
-      <Project>{a68df862-999e-4b8e-9cb2-5094d90bfae5}</Project>
-      <Name>D365AppInsights.Js.References</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="content\Scripts\typings\jlattimer.d365appinsights\jlattimer.d365appinsights.d.ts" />
+    <TypeScriptCompile Include="content\Scripts\typings\microsoft.applicationinsights\ai.1.0.18-build01843.d.ts" />
     <TypeScriptCompile Include="content\ts\jlattimer.d365appinsights.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem Remove files from reference project
-del "$(TargetDir)D365AppInsights.Js.References.dll"
-del "$(TargetDir)D365AppInsights.Js.References.pdb"
-
-rem Package
-"$(ProjectDir)"..\".NuGetPack\NuGetPack.exe" "$(ProjectPath)" "$(TargetPath)" $(ConfigurationName)
-
-rem Remove reference project assemblies from .nupkg
-"$(ProjectDir)"..\".NuGetPack\NupkgWrench.exe" files remove "$(ProjectDir)bin\$(ConfigurationName)" --path lib\*.*</PostBuildEvent>
+    <PostBuildEvent>"$(ProjectDir)"..\".NuGetPack\NuGetPack.exe" "$(ProjectPath)" "$(TargetPath)" $(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
