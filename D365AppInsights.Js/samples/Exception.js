@@ -5,7 +5,7 @@
         doSomethingNotDefined();
 
     } catch (e) {
-        AiFormLogger.writeException(e, "ExceptionTest", null, null, AI.SeverityLevel.Error);
+        AiFormLogger.writeException(e, "ExceptionTest", AI.SeverityLevel.Error, null, null);
     }
 
 }

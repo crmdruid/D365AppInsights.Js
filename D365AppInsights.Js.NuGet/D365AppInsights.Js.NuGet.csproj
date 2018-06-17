@@ -51,7 +51,7 @@
     <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="content\jlattimer.d365appinsights.min.js.map" />
+    <None Include="content\jlattimer.d365appinsights_1.0.2.min.js.map" />
     <None Include="NuGetPack.config">
       <SubType>Designer</SubType>
     </None>
@@ -61,13 +61,17 @@
     </None>
     <None Include="NuGetPack.Readme.txt" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="content\ai.1.0.18-build01843.js" />
-    <Content Include="content\ai.1.0.18-build01843.min.js" />
-    <Content Include="content\jlattimer.d365appinsights.js" />
-    <Content Include="content\jlattimer.d365appinsights.min.js" />
+    <TypeScriptCompile Include="content\jlattimer.d365appinsights_1.0.2.d.ts" />
+    <TypeScriptCompile Include="content\jlattimer.d365appinsights_1.0.2.ts" />
+    <TypeScriptCompile Include="content\scripts\ai.1.0.18-build01843.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\jlattimer.d365appinsights_1.0.2.js" />
+    <Content Include="content\jlattimer.d365appinsights_1.0.2.min.js" />
     <Content Include="content\ReadMe.txt" />
+    <Content Include="content\scripts\ai.1.0.18-build01843.js" />
+    <Content Include="content\scripts\ai.1.0.18-build01843.min.js" />
     <Content Include="gulpfile.js" />
   </ItemGroup>
   <ItemGroup>
@@ -84,11 +88,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="content\Scripts\typings\jlattimer.d365appinsights\jlattimer.d365appinsights.d.ts" />
-    <TypeScriptCompile Include="content\Scripts\typings\microsoft.applicationinsights\ai.1.0.18-build01843.d.ts" />
-    <TypeScriptCompile Include="content\ts\jlattimer.d365appinsights.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
