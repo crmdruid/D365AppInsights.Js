@@ -45,5 +45,3 @@ Configurations:
 Build Status:  ![Build status](https://jlattimer.visualstudio.com/_apis/public/build/definitions/06ce8222-9dda-4377-9d93-63cc2e555086/29/badge)
 
 https://www.nuget.org/packages/JLattimer.D365AppInsights.Js/
-
-*This is only marked as prerelease because it takes dependencies on 2 Microsoft libraries that are versioned in such a way that they show up in NuGet as prerelease. NuGet currently forbids packaging prerelease dependencies with non-prerelease packages.*
