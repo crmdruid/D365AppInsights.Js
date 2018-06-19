@@ -2,6 +2,8 @@
 
 This contains the minified, unminified, map, TypeScript, and TypeScript definition files needed to implement Azure Application Insights logging as well as the content from the original Microsoft implementation.   
 
+[See the wiki for additional details & examples](https://github.com/jlattimer/D365AppInsights.Js/wiki)
+
 Supported telemetry types:
 * Trace 
 * Event 
