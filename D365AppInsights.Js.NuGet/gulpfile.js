@@ -26,7 +26,7 @@ gulp.task("build:ts", ["get:Version"], function () {
 });
 
 gulp.task("move:js", ["build:ts"], function () {
-    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/jlattimer.d365appinsights.js"])
+    gulp.src([paths.root + "../D365AppInsights.Js/scripts/ai.init.js", paths.root + "../D365AppInsights.Js/jlattimer.d365appinsights.js"])
         .pipe(concat(paths.jsDest + "/jlattimer.d365appinsights" + version + ".js"))
         .pipe(gulp.dest(""));
 
@@ -34,7 +34,7 @@ gulp.task("move:js", ["build:ts"], function () {
 });
 
 gulp.task("min:js", ["move:js"], function () {
-    gulp.src([paths.root + "../D365AppInsights.Js/scripts/AiLogger.js", paths.root + "../D365AppInsights.Js/jlattimer.d365appinsights.js"])
+    gulp.src([paths.root + "../D365AppInsights.Js/scripts/ai.init.js", paths.root + "../D365AppInsights.Js/jlattimer.d365appinsights.js"])
         .pipe(sourcemaps.init())
         .pipe(concat(paths.jsDest + "/jlattimer.d365appinsights" + version + ".min.js"))
         .pipe(gulp.dest(""))

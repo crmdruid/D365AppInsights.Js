@@ -1,6 +1,6 @@
 ﻿/*
   Add this function to form's OnLoad handler
-  AiFormLogger.startLogging
+  D365AppInsights.startLogging
  
   Pass this JSON string to the function and set values as needed
 

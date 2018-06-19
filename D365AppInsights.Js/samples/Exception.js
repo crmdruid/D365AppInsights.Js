@@ -1,19 +1,15 @@
-﻿function ExceptionTest() {
-
-    try {
-
-        doSomethingNotDefined();
-
-    } catch (e) {
-        AiFormLogger.writeException(e, "ExceptionTest", AI.SeverityLevel.Error, null, null);
+﻿var TestException;
+(function (TestException) {
+    function executeTest() {
+        try {
+            doSomethingNotDefined();
+        }
+        catch (e) {
+            D365AppInsights.writeException(e, "ExceptionTest", AI.SeverityLevel.Error, null, null);
+        }
     }
-
-}
-
-function UnhandledExceptionTest() {
-
-    //Unhandled exceptions are not currently logged (this appears to be a bug)
-
-    doSomethingElseNotDefined();
-
-}
+    TestException.executeTest = executeTest;
+    function unhandledExceptionTest() {
+        doSomethingElseNotDefined();
+    }
+})(TestException || (TestException = {}));
