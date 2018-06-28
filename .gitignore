@@ -264,4 +264,8 @@ __pycache__/
 D365AppInsights.Js.NuGet/content/scripts/
 D365AppInsights.Js.NuGet/content/ts/
 D365AppInsights.Js.NuGet/content/jlattimer.d365appinsights*
-D365AppInsights.Js/jlattimer.d365appinsights*
+D365AppInsights.Js/jlattimer.d365appinsights.js
+D365AppInsights.Js/jlattimer.d365appinsights.d.ts
+
+# solutions folder
+**/solutions/*
