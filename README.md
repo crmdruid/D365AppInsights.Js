@@ -15,6 +15,7 @@ Supported telemetry types:
 * PageView 
 
 Default D365 Specific Custom Dimensions:
+* User Id  
 * Entity Name 
 * Entity Id 
 * Form type 
